@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Asegura espacio lateral en dispositivos pequeños */
+  padding: 10px; /* ASegura espacio lateral en dispositivos pequeños */
 }
 
 /* Contenedor */
