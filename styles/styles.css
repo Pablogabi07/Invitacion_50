@@ -8,13 +8,13 @@
 /* Estilos del cuerpo */
 body {
   font-family: "Arial", sans-serif;
-  background: url("../asset/fondo6.jpg") no-repeat center center fixed;
+  background: url("/asset/fondo6.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* ASegura espacio lateral en dispositivos pequeños */
+  padding: 10px; /* Asegura espacio lateral en dispositivos pequeños */
 }
 
 /* Contenedor */
@@ -26,11 +26,19 @@ body {
 
 /* Tarjeta */
 .card {
-  background-color: rgba(254, 232, 255, 0.9); /* Semitransparente */
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   animation: fadeIn 2s ease-in-out;
+  background: url("/asset/fondo50.png") no-repeat center center fixed;
+  position: relative; /* Para controlar la superposición */
+  background-size: cover; /* Hace que la imagen cubra todo el card */
+}
+
+/* Contenido de la tarjeta */
+.card > * {
+  position: relative;
+  z-index: 2; /* Eleva el contenido por encima del fondo */
 }
 
 /* Título */
