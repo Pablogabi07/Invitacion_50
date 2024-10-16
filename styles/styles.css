@@ -107,12 +107,10 @@ h1 {
 
 /* Contenedor */
 .container {
-  width: 300%;
-  max-width: 600px; /* Ancho máximo en pantallas grandes */
   text-align: center;
-  background: url("../asset/fondo50.png") no-repeat center center fixed;
-  position: relative; /* Para controlar la superposición */
-
+  background: none;
+  position: none;
+  background-size: none;
 }
 
 
@@ -182,6 +180,14 @@ h1 {
   .titulo {
     font-size: 3rem;
   }
+
+  /* Contenedor */
+.container {
+  text-align: center;
+  background: none;
+  position: none;
+  background-size: none;
+}
 
   .number,
   .nombre {
