@@ -111,8 +111,6 @@ h1 {
 /* Contenedor */
 .container {
   text-align: center;
-  background: url("../asset/mariposas.png") no-repeat center center fixed;
-   filter: brightness(80%); /* Hace la imagen más oscura y por lo tanto, más transparente */
   position: none;
   background-size: none;
 }
@@ -194,8 +192,6 @@ h1 {
   /* Contenedor */
 .container {
   text-align: center;
-  background: url("../asset/mariposas.png") no-repeat center center fixed;
-   filter: brightness(80%); /* Hace la imagen más oscura y por lo tanto, más transparente */
   position: none;
   background-size: none;
 }
