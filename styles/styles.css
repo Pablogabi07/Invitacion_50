@@ -110,7 +110,7 @@ h1 {
 /* Contenedor */
 .container {
   text-align: center;
-  background: none;
+  background: url("../asset/mariposas.png") no-repeat center center fixed;
   position: none;
   background-size: none;
 }
