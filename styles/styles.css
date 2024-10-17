@@ -25,7 +25,7 @@ body {
   background: url("../asset/fondo50.png") no-repeat center center fixed;
   position: relative; /* Para controlar la superposición */
   background-size: contain; /* Hace que la imagen cubra todo el card */
-   filter: brightness(80%); /* Hace la imagen más oscura y por lo tanto, más transparente */
+  
 }
 
 /* Tarjeta */
@@ -120,6 +120,7 @@ h1 {
 /* Tarjeta */
 .card {
   background: f29efa;
+   filter: brightness(80%); /* Hace la imagen más oscura y por lo tanto, más transparente */
 }
 
 
