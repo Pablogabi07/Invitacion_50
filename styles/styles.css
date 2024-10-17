@@ -113,6 +113,11 @@ h1 {
   background-size: none;
 }
 
+/* Tarjeta */
+.card {
+  background: f29efa;
+}
+
 
 /* Botón para confirmar asistencia */
 .confirm-button {
