@@ -16,7 +16,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="card" id="birthday-card">
+      <div class="card" id="card">
+        <!-- Parte delantera -->
         <div class="card-front">
           <h1 class="titulo">¡Te invito a celebrar mi cumpleaños!</h1>
           <p><span class="number">50</span></p>
@@ -25,12 +26,14 @@
             <span>Lili</span>
             <img src="./asset/copas.png" alt="derecha" class="icono" />
           </p>
+
           <div class="separator"></div>
           <p class="details">
             <span class="month">Enero</span><br />
             <span class="day-hour">Sábado 11 - 21:00HS</span>
           </p>
           <div class="separator"></div>
+          <br /><br />
           <a
             href="https://wa.me/1162348510?text=Hola,%20confirmo%20mi%20asistencia%20al%20evento"
             target="_blank"
@@ -38,20 +41,24 @@
             >Por favor confirmar asistencia</a
           >
           <br /><br />
-          <button id="flip-btn" class="link-button">Ver Dirección</button>
+          <button class="link-button" onclick="flipCard()">Ver Dirección</button>
         </div>
 
-        <!-- Parte trasera de la tarjeta con el mapa -->
+        <!-- Parte trasera -->
         <div class="card-back">
           <iframe
-            src="https://maps.google.com/maps?q=-34.603722,-58.381592&hl=es;z=14&output=embed"
-            width="300"
-            height="200"
-            style="border:0;"
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.610488827325!2d-122.41941568467834!3d37.77492977975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a2b6762f%3A0x4bd13ab4ed473c26!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1609485239354!5m2!1sen!2s"
             allowfullscreen=""
+            loading="lazy"
           ></iframe>
-          <br /><br />
-          <button id="flip-back-btn" class="link-button">Regresar</button>
+          <button class="back-button" onclick="flipCard()">Regresar</button>
+          <a
+            href="https://maps.app.goo.gl/TPEUWXcrChz5Jtm9A"
+            target="_blank"
+            class="go-button"
+            >Ir a Dirección</a
+          >
         </div>
       </div>
     </div>
