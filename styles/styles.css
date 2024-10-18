@@ -50,6 +50,9 @@ body {
 
 .card-front {
   background: #ffffff;
+  background: url("/asset/fondo10.avif") no-repeat center center fixed;
+  position: relative; /* Para controlar la superposición */
+  background-size: contain; /* Hace que la imagen cubra todo el card */
 }
 
 .card-back {
