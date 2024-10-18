@@ -52,8 +52,7 @@ body {
 
 /* Parte delantera de la tarjeta */
 .card-front {
-
-  
+background: #fdfdfd;
 }
 
 /* Parte trasera de la tarjeta */
