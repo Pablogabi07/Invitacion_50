@@ -55,7 +55,7 @@ body {
 
   background: url("../asset/fondo50.png") no-repeat center center fixed;
   position: relative; /* Para controlar la superposición */
-  background-size: contain; /* Hace que la imagen cubra todo el card */
+  background-size: contain; /* Hace que la imagen cubra tdo el card */
 }
 
 /* Parte trasera de la tarjeta */
