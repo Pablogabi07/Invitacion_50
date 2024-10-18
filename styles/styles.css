@@ -8,7 +8,9 @@
 /* Estilos del cuerpo */
 body {
   font-family: "Arial", sans-serif;
-  background: url("../asset/fondo6.jpg") no-repeat center center fixed;
+  background: url("../asset/fondo50.png") no-repeat center center fixed;
+  position: relative; /* Para controlar la superposición */
+  background-size: contain; /* Hace que la imagen cubra todo el card */
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -22,9 +24,7 @@ body {
   width: 300%;
   max-width: 600px; /* Ancho máximo en pantallas grandes */
   text-align: center;
-  background: url("../asset/fondo50.png") no-repeat center center fixed;
-  position: relative; /* Para controlar la superposición */
-  background-size: contain; /* Hace que la imagen cubra todo el card */
+  
   
 }
 
