@@ -9,14 +9,14 @@
 body {
   font-family: "Arial", sans-serif;
   background: url("../asset/fondo50.png") no-repeat center center fixed;
-  position: relative; 
-  background-size: contain; 
+  position: relative; /* Para controlar la superposición */
+  background-size: contain; /* Hace que la imagen cubra todo el card */
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px; /* Asegura espacio lateral en dispositivos pequeños */
 }
 
 /* Contenedor */
