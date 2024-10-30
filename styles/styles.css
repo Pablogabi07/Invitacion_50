@@ -199,7 +199,7 @@ p {
 @media (max-width: 768px) {
   .card {
       width: 350px;
-      height: 700px;
+      height: 650px;
   }
 
   h2 {
