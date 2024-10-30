@@ -105,8 +105,8 @@ h2 {
 .fifteen {
   position: relative;
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   background-image: url('../asset/fondo15.png');
   background-size: cover;
   background-position: center;
@@ -207,12 +207,12 @@ p {
   }
 
   .fifteen {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
   }
 
   .fifteen::after {
-      font-size: 3.5rem;
+      font-size: 4rem;
   }
 
   p {
@@ -248,12 +248,12 @@ p {
   }
 
   .fifteen {
-      width: 120px;
-      height: 120px;
+      width: 200px;
+      height: 200px;
   }
 
   .fifteen::after {
-      font-size: 3rem;
+      font-size: 4rem;
   }
 
   p {
