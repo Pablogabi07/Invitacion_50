@@ -88,7 +88,9 @@ body {
   z-index: 2; /* Coloca el contenido por encima del pseudo-elemento */
 }
 
-
+.inv{
+  font-size: 3rem;;
+}
 
 
 h2 {
@@ -119,9 +121,8 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: "Great Vibes", cursive;
-}
 
 p {
   font-family: "Great Vibes", cursive;
@@ -136,7 +137,7 @@ p {
 }
 
 .nombre {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #8e33b6;
 }
 
