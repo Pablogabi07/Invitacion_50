@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invitación 50 años</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="card" id="card">
-        <!-- Parte delantera -->
-        <div class="card-front">
-          <h1 class="titulo">¡Te invito a celebrar mi cumpleaños!</h1>
-          <p><span class="number">50</span></p>
-          <p class="nombre">
-            <img src="./asset/copas.png" alt="izquierda" class="icono" />
-            <span>Lili</span>
-            <img src="./asset/copas.png" alt="derecha" class="icono" />
-          </p>
-
-          <div class="separator"></div>
-          <p class="details">
-            <span class="month">Enero</span><br />
-            <span class="day-hour">Sábado 11 - 21:00HS</span>
-          </p>
-          <div class="separator"></div>
-          <br /><br />
-          <a
-            href="https://wa.me/1162348510?text=Hola,%20confirmo%20mi%20asistencia%20al%20evento"
-            target="_blank"
-            class="confirm-button"
-            >Por favor confirmar asistencia</a
-          >
-          <br /><br />
-          <!-- Botón Ver Dirección -->
-<button id="flip-btn" class="link-button">Ver Dirección</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación 50 Años</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <br><br>
+                <p>¡Te invito a celebrar mi cumpleaños!</p>
+                <h2><span class="fifteen"></span></h2>
+                <p class="nombre">Lili</p><br>
+                <p><strong class="fecha">Fecha:</strong> <br>
+                    11 de Enero, 21:00 hs</p><br>
+                <div class="buttons">
+                    <a href="https://wa.me/123456789?text=¡Hola! Confirmo mi asistencia al cumpleaños de 15" target="_blank" class="btn confirm">Confirmar asistencia</a>
+                    <button class="btn location" onclick="flipCard()">Ver dirección</button>
+                </div>
+            </div>
+            
+            <div class="back">
+                <h2 class="direc">Dirección del evento</h2>
+                <br><br>
+                <p class="salon">Salón Allegra</p>
+                <p class="direccion">Carola Lorenzini 1500 - Francisco Alvarez</p>
+                <br><br><br>
+                <a href="https://maps.app.goo.gl/eVBfr1Jvm5BpG7gU7" target="_blank" class="btn map">Abrir en Google Maps</a>
+                <br>
+                <button class="btn location" onclick="flipCard()">Volver</button>
+            </div>
         </div>
-
-        <!-- Parte trasera -->
-        <div class="card-back">
-          <iframe
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.610488827325!2d-122.41941568467834!3d37.77492977975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a2b6762f%3A0x4bd13ab4ed473c26!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1609485239354!5m2!1sen!2s"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-          <!-- Parte trasera -->
-<button id="flip-back-btn" class="back-button">Regresar</button>
-          <a
-            href="https://maps.app.goo.gl/TPEUWXcrChz5Jtm9A"
-            target="_blank"
-            class="go-button"
-            >Ir a Dirección</a
-          >
-        </div>
-      </div>
     </div>
-
-    <script src="./styles/script.js"></script>
-  </body>
+    <script src="/src/script.js"></script>
+</body>
 </html>
+
