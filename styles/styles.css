@@ -198,7 +198,7 @@ p {
 /* Estilos específicos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .card {
-      width: 350px;
+      width: 400px;
       height: 650px;
   }
 
