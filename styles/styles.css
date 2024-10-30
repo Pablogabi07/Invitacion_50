@@ -88,9 +88,6 @@ body {
   z-index: 2; /* Coloca el contenido por encima del pseudo-elemento */
 }
 
-.inv{
-  font-size: 3rem;
-}
 
 
 h2 {
