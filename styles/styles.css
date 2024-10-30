@@ -1,229 +1,276 @@
-/* General reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Estilos del cuerpo */
 body {
-  font-family: "Arial", sans-serif;
-  background: url("../asset/fondo50.png") no-repeat center center fixed;
-  position: relative; /* Para controlar la superposición */
-  background-size: contain; /* Hace que la imagen cubra todo el card */
+  background-image: url(''); /* Ruta de la imagen de fondo */
   background-size: cover;
-  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Asegura espacio lateral en dispositivos pequeños */
+  height: 100vh;
+  margin: 0;
+  background-color: #d6eaff;
 }
 
-/* Contenedor */
-.container {
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
+.card-container {
   perspective: 1000px;
 }
 
-/* Tarjetaa */
 .card {
-  width: 100%;
-  height: auto;
+  width: 400px;
+  height: 750px;
+  background: linear-gradient(145deg, #f1ceff, #f781f7);
+  border-radius: 40px;
+  box-shadow: 0 20px 20px rgba(255, 46, 220, 0.2);
+  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s;
-  position: relative;
 }
 
-.card-front,
-.card-back {
+.front, .back {
+  position: absolute;
   width: 100%;
+  height: 100%;
   backface-visibility: hidden;
+  border-radius: 40px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.front {
+  background: linear-gradient(145deg, #f1ceff, #f781f7);
+}
+
+.back {
+  background: linear-gradient(145deg, #f1ceff, #f781f7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  text-align: center;
+  border-radius: 40px;
+  padding: 20px;
+  color: white;
+  position: relative; /* Necesario para que el pseudo-elemento se posicione correctamente */
+  overflow: hidden; /* Asegura que el pseudo-elemento no se salga del borde de la tarjeta */
+}
+
+.back::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  right: 0;
+  bottom: 0;
+  background-image: url('../asset/fondoback2.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Ajusta este valor para cambiar la opacidad */
+  z-index: 1; /* Asegura que el pseudo-elemento esté detrás del contenido de texto */
+  border-radius: 40px;
 }
 
-.card-front {
-  background: #ffffff;
+.back * {
+  position: relative;
+  z-index: 2; /* Coloca el contenido por encima del pseudo-elemento */
 }
 
-.card-back {
-  background: #ff6b6b;
-  transform: rotateY(180deg);
+
+
+
+h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-family: "Great Vibes", cursive;
 }
 
-/* Animación de giro */
+.fifteen {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url('../asset/fondo15.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  line-height: 80px;
+  text-align: center;
+}
+
+.fifteen::after {
+  content: "50";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+  font-family: "Great Vibes", cursive;
+}
+
+p {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  
+}
+
+.salon{
+  font-size: 50px;
+}
+
+.nombre {
+  font-size: 4rem;
+  color: #8e33b6;
+}
+
+.fecha {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: #8e33b6;
+}
+
+.direc {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.5rem;
+  color: #8e33b6;
+  
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: rgb(255, 255, 255);
+  color: #8e44ad;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #b30fc9;
+  color: white;
+}
+
+.map {
+  background-color: white;
+  color: #9b59b6;
+}
+
+.map:hover {
+  background-color: #b30fc9;
+  color: white;
+}
+
 .card.flipped {
   transform: rotateY(180deg);
 }
 
-/* Mapa */
-.map {
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Botón para confirmar asistencia */
-.confirm-button {
-  background-color: #f29efa;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.confirm-button:hover {
-  background-color: #ff3bff;
-}
-
-/* Botón de enlace (Ver Dirección, Ir a Dirección, y Regresar) */
-.link-button, .go-button, .back-button {
-  background-color: #f29efa;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
-
-.link-button:hover, .go-button:hover, .back-button:hover {
-  background-color: #ff3bff;
-}
-
-/* Estilos del texto */
-h1 {
-  color: #ff6b6b;
-  font-size: 2rem;
-}
-
-.titulo {
-  font-family: "Kaushan Script", cursive;
-  font-weight: 400;
-  font-size: 4rem;
-  color: #ff8484;
-}
-
-.number {
-  font-family: "Great Vibes", cursive;
-  font-size: 6rem;
-  color: #ff6b6b;
-}
-
-.nombre {
-  font-family: "Great Vibes", cursive;
-  font-size: 6rem;
-  color: #000000;
-}
-
-.details {
-  font-family: "Playfair Display", serif;
-  color: #777;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.details .month {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.details .day-hour {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-/* Animación de la tarjeta */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Línea de separación personalizada */
-.separator {
-  width: 80%;
-  height: 2px;
-  background-color: #fdb3b3;
-  margin: 10px auto;
-}
-
-/* Estilo para el número con líneas a los lados */
-.number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Great Vibes", cursive;
-  font-size: 6rem;
-  color: #ff6b6b;
-  position: relative;
-}
-
-.number::before,
-.number::after {
-  content: "";
-  flex: 1;
-  height: 2px;
-  background-color: #fdb3b3;
-  margin: 0 10px;
-}
-
-.nombre {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Great Vibes", cursive;
-  font-size: 6rem;
-  color: #000000;
-}
-
-.icono {
-  width: 80px;
-  height: auto;
-  margin: 0 10px;
-}
-
-/* Adaptaciones para pantallas pequeñas */
-@media (max-width: 600px) {
-  .titulo {
-    font-size: 3rem;
-  }
-
-  .number,
-  .nombre {
-    font-size: 4rem;
-  }
-
-  .details {
-    font-size: 1rem;
-  }
-
-  .link-button,
-  .go-button,
-  .back-button {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
+/* Estilos específicos para pantallas más pequeñas */
+@media (max-width: 768px) {
   .card {
-    padding: 15px;
+      width: 320px;
+      height: 600px;
+  }
+
+  h2 {
+      font-size: 3rem;
+  }
+
+  .fifteen {
+      width: 150px;
+      height: 150px;
+  }
+
+  .fifteen::after {
+      font-size: 3rem;
+  }
+
+  p {
+      font-size: 1.6rem;
+  }
+
+  .nombre {
+      font-size: 2.5rem;
+  }
+
+  .fecha {
+      font-size: 1.6rem;
+  }
+
+  .direc {
+      font-size: 2rem;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 280px;
+      height: 500px;
+  }
+
+  h2 {
+      font-size: 2.5rem;
+  }
+
+  .fifteen {
+      width: 120px;
+      height: 120px;
+  }
+
+  .fifteen::after {
+      font-size: 2.5rem;
+  }
+
+  p {
+      font-size: 1.4rem;
+  }
+
+  .nombre {
+      font-size: 2.2rem;
+  }
+
+  .fecha {
+      font-size: 1.4rem;
+  }
+
+  .direc {
+      font-size: 1.8rem;
+  }
+
+  .btn {
+      font-size: 0.8rem;
+      padding: 6px 10px;
   }
 }
