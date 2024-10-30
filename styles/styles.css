@@ -240,7 +240,7 @@ p {
 @media (max-width: 480px) {
   .card {
       width: 300px;
-      height: 550px;
+      height: 650px;
   }
 
   h2 {
