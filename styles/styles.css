@@ -88,7 +88,12 @@ body {
   z-index: 2; /* Coloca el contenido por encima del pseudo-elemento */
 }
 
-
+.inv{
+  font-size: 3rem;
+  font-family: "Great Vibes", cursive;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
 
 h2 {
   font-size: 3.5rem;
@@ -126,7 +131,6 @@ p {
   font-size: 2.5rem;
   color: #ffffff;
   margin-bottom: 10px;
-  
 }
 
 .salon{
