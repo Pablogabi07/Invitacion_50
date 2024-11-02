@@ -203,7 +203,7 @@ p {
 @media (max-width: 768px) {
   .card {
       width: 400px;
-      height: 650px;
+      height: 700px;
   }
 
   h2 {
@@ -248,7 +248,7 @@ p {
 @media (max-width: 480px) {
   .card {
       width: 340px;
-      height: 650px;
+      height: 700px;
   }
 
   h2 {
