@@ -153,9 +153,13 @@ p {
   font-family: "Great Vibes", cursive;
   font-size: 3.5rem;
   color: #8e33b6;
-  
 }
 
+.direccion{
+  font-size: 3.5rem;
+}
+
+  
 .buttons {
   display: flex;
   flex-direction: column;
